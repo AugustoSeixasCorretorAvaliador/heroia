@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HERO.IA — IA Assistiva no WhatsApp</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #050816;
+      color: #ffffff;
+      line-height: 1.5;
+    }
+    .page { max-width: 780px; margin: 0 auto; padding: 18px; }
+    .card {
+      background: linear-gradient(180deg, #111936, #080b1c);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 22px;
+      padding: 22px;
+      margin: 18px 0;
+      box-shadow: 0 10px 35px rgba(0,0,0,.35);
+    }
+    .hero-img {
+      width: 100%;
+      border-radius: 24px;
+      display: block;
+      box-shadow: 0 12px 40px rgba(30,100,255,.35);
+    }
+    h1, h2, h3 { margin: 0 0 14px; line-height: 1.15; }
+    h1 { font-size: 34px; }
+    h2 { font-size: 27px; }
+    h3 { font-size: 22px; }
+    p { margin: 10px 0; font-size: 18px; }
+    .yellow { color: #ffd25a; font-weight: 800; }
+    .green { color: #29e676; font-weight: 900; }
+    .red { color: #ff4d4d; font-weight: 900; }
+    .muted { color: #cbd5e1; }
+    .cta {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 17px 18px;
+      border-radius: 16px;
+      background: linear-gradient(90deg, #10b981, #22c55e);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 19px;
+      margin: 16px 0 8px;
+      box-shadow: 0 8px 22px rgba(34,197,94,.35);
+    }
+    .cta.secondary { background: linear-gradient(90deg, #2563eb, #7c3aed); }
+    .cta.hot { background: linear-gradient(90deg, #f97316, #ef4444); }
+    .quiz-question { display: none; }
+    .quiz-question.active { display: block; }
+    .option {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border: 0;
+      border-radius: 14px;
+      background: #ff6b00;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .progress-wrap {
+      background: rgba(255,255,255,.13);
+      border-radius: 99px;
+      height: 12px;
+      margin: 12px 0 20px;
+      overflow: hidden;
+    }
+    .progress { height: 100%; width: 0%; background: linear-gradient(90deg, #f97316, #facc15); transition: .3s; }
+    #diagnostico { display:none; }
+    .countdown {
+      background: #111827;
+      border: 2px solid #facc15;
+      color: #facc15;
+      padding: 14px;
+      border-radius: 16px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin: 12px 0;
+    }
+    .price {
+      background: rgba(255,255,255,.06);
+      border-radius: 18px;
+      padding: 18px;
+      text-align: center;
+      margin-top: 12px;
+    }
+    .price .old { font-size: 24px; text-decoration: line-through; color: #ff6b6b; font-weight: 900; }
+    .price .new { font-size: 44px; color: #22c55e; font-weight: 1000; }
+    .video {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 18px;
+      background: #000;
+      margin: 14px 0;
+    }
+    .video iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+    ul { padding-left: 22px; }
+    li { margin: 8px 0; font-size: 18px; }
+    .sticky {
+      position: sticky;
+      bottom: 0;
+      z-index: 99;
+      background: rgba(5,8,22,.92);
+      backdrop-filter: blur(10px);
+      padding: 10px 0;
+      border-top: 1px solid rgba(255,255,255,.12);
+    }
+    .small { font-size: 14px; color: #cbd5e1; text-align:center; }
+    @media(max-width: 520px) {
+      h1 { font-size: 29px; }
+      h2 { font-size: 24px; }
+      p, li { font-size: 16px; }
+      .page { padding: 12px; }
+      .card { padding: 17px; border-radius: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <img src="heroia-stand.jpeg" alt="HERO.IA Ecossistema Completo" class="hero-img" />
+
+    <section class="card">
+      <h1>🚨 Seu WhatsApp está te fazendo perder dinheiro?</h1>
+      <p>Respostas sem estratégia, leads sem resposta, follow-ups esquecidos e objeções invisíveis podem estar travando suas vendas.</p>
+      <p><strong>HERO.IA</strong> — a IA assistiva que atua dentro da própria caixa de rascunho do WhatsApp, ajudando você a responder exatamente a mensagem que precisa — com estratégia, clareza e foco em conversão.</p>
+      <a class="cta secondary" href="#quiz">COMEÇAR DIAGNÓSTICO GRATUITO</a>
+      <a class="cta hot" href="https://pay.hotmart.com/S103706651L?off=64c25bj6&bid=1771705199209">🔥 COMPRAR AGORA POR R$ 67,00</a>
+    </section>
+
+    <section id="quiz" class="card">
+      <h2>🧩 Diagnóstico rápido do seu atendimento</h2>
+      <p class="muted">Responda em menos de 1 minuto.</p>
+      <div class="progress-wrap"><div id="progress" class="progress"></div></div>
+
+      <div class="quiz-question active">
+        <h3>1️⃣ Você atende clientes pelo WhatsApp?</h3>
+        <button class="option">Sim, todos os dias</button>
+        <button class="option">Sim, mas sem padrão</button>
+        <button class="option">Pouco</button>
+        <button class="option">Não, mas quero começar</button>
+      </div>
+      <div class="quiz-question">
+        <h3>2️⃣ O que mais acontece no seu atendimento?</h3>
+        <button class="option">Cliente some</button>
+        <button class="option">Demoro a responder</button>
+        <button class="option">Não consigo fechar</button>
+        <button class="option">A conversa não evolui</button>
+      </div>
+      <div class="quiz-question">
+        <h3>3️⃣ Você faz follow-up estruturado?</h3>
+        <button class="option">Não faço</button>
+        <button class="option">Esqueço</button>
+        <button class="option">Faço, mas sem método</button>
+        <button class="option">Faço, mas poderia melhorar</button>
+      </div>
+      <div class="quiz-question">
+        <h3>4️⃣ Você sabe identificar objeções do cliente?</h3>
+        <button class="option">Não</button>
+        <button class="option">Tenho dificuldade</button>
+        <button class="option">Às vezes</button>
+        <button class="option">Sim</button>
+      </div>
+      <div class="quiz-question">
+        <h3>5️⃣ Se existisse uma IA te ajudando a responder melhor, você usaria?</h3>
+        <button class="option">Sim, com certeza</button>
+        <button class="option">Talvez</button>
+        <button class="option">Depende</button>
+        <button class="option">Quero entender melhor</button>
+      </div>
+
+      <div id="diagnostico">
+        <h2>⚠️ Diagnóstico concluído</h2>
+        <p>👉 Você não está perdendo vendas por falta de cliente.</p>
+        <p>👉 Está perdendo por falta de estratégia no atendimento.</p>
+        <p class="yellow">A boa notícia: isso pode ser corrigido com o HERO.IA.</p>
+        <a class="cta hot" href="https://pay.hotmart.com/S103706651L?off=64c25bj6&bid=1771705199209">🔥 QUERO CORRIGIR MEU ATENDIMENTO AGORA</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>⏰ Oferta promocional ativa</h2>
+      <p>Condição especial por tempo limitado:</p>
+      <div class="countdown" id="timer">14:59</div>
+      <div class="price">
+        <div class="old">De R$ 97,00</div>
+        <div class="new">Por R$ 67,00</div>
+      </div>
+      <a class="cta hot" href="https://pay.hotmart.com/S103706651L?off=64c25bj6&bid=1771705199209">COMPRAR AGORA</a>
+    </section>
+
+    <section class="card">
+      <h2>🎥 Veja o depoimento</h2>
+      <div class="video"><iframe src="https://www.youtube.com/embed/IPiIikDusvw" allowfullscreen></iframe></div>
+      <p class="yellow">Quem entende o problema do atendimento no WhatsApp percebe rápido o valor do HERO.IA.</p>
+      <a class="cta hot" href="https://pay.hotmart.com/S103706651L?off=64c25bj6&bid=1771705199209">🔥 QUERO ACESSO AO HERO.IA</a>
+    </section>
+
+    <section class="card">
+      <h2>🚀 Conheça o HERO.IA — Parte 1</h2>
+      <div class="video"><iframe src="https://www.youtube.com/embed/Wy5ouGJuohQ" allowfullscreen></iframe></div>
+      <p>Você não precisa responder mais rápido apenas. Você precisa responder melhor.</p>
+      <a class="cta hot" href="https://pay.hotmart.com/S103706651L?off=64c25bj6&bid=1771705199209">ATIVAR HERO.IA AGORA</a>
+    </section>
+
+    <section class="card">
+      <h2>🧠 Conheça o HERO.IA — Parte 2</h2>
+      <div class="video"><iframe src="https://www.youtube.com/embed/ZlAp4fd05m8" allowfullscreen></iframe></div>
+      <p>O problema não é o cliente. É a forma como a conversa é conduzida.</p>
+      <a class="cta hot" href="https://pay.hotmart.com/S103706651L?off=64c25bj6&bid=1771705199209">COMEÇAR AGORA POR R$ 67,00</a>
+    </section>
+
+    <section class="card">
+      <h2>💬 Conheça o HERO.IA — Parte 3</h2>
+      <div class="video"><iframe src="https://www.youtube.com/embed/d8oHv53wj98" allowfullscreen></iframe></div>
+      <p class="yellow">Quem responde melhor, vende mais.</p>
+      <a class="cta hot" href="https://pay.hotmart.com/S103706651L?off=64c25bj6&bid=1771705199209">GARANTIR MEU ACESSO</a>
+    </section>
+
+    <section class="card">
+      <img src="heroia-stand.jpeg" alt="HERO.IA" class="hero-img" />
+      <h2 style="margin-top:18px;">🔥 O que você ganha com o HERO.IA</h2>
+      <ul>
+        <li>✅ Respostas estratégicas em 1 clique</li>
+        <li>✅ Copiloto de atendimento comercial</li>
+        <li>✅ Refinamento automático de texto</li>
+        <li>✅ Apoio no follow-up</li>
+        <li>✅ Leitura de objeções</li>
+        <li>✅ Atendimento com mais clareza, padrão e conversão</li>
+      </ul>
+      <p><strong>HERO.IA não é chatbot.</strong> É inteligência assistiva para o profissional continuar no controle.</p>
+      <a class="cta secondary" href="https://hero.ia.br/heroia-installer/">📌 INSTALAR / ACESSAR HERO.IA</a>
+      <a class="cta hot" href="https://pay.hotmart.com/S103706651L?off=64c25bj6&bid=1771705199209">🔥 COMPRAR AGORA POR R$ 67,00</a>
+    </section>
+
+    <section class="card">
+      <h2>🛡️ Garantia</h2>
+      <p>✅ 7 dias de garantia total.</p>
+      <p>Você compra, testa e decide com tranquilidade.</p>
+      <a class="cta hot" href="https://pay.hotmart.com/S103706651L?off=64c25bj6&bid=1771705199209">QUERO ATIVAR MEU HERO.IA</a>
+    </section>
+
+    <div class="sticky">
+      <a class="cta hot" href="https://pay.hotmart.com/S103706651L?off=64c25bj6&bid=1771705199209">🔥 Comprar HERO.IA — R$ 67,00</a>
+      <div class="small">Após a compra: https://hero.ia.br/heroia-installer/</div>
+    </div>
+  </div>
+
+<script>
+  const questions = document.querySelectorAll('.quiz-question');
+  const options = document.querySelectorAll('.option');
+  const progress = document.getElementById('progress');
+  const diagnostico = document.getElementById('diagnostico');
+  let current = 0;
+  progress.style.width = '20%';
+  options.forEach(btn => {
+    btn.addEventListener('click', () => {
+      questions[current].classList.remove('active');
+      current++;
+      if (current < questions.length) {
+        questions[current].classList.add('active');
+        progress.style.width = ((current + 1) / questions.length * 100) + '%';
+      } else {
+        progress.style.width = '100%';
+        diagnostico.style.display = 'block';
+        diagnostico.scrollIntoView({behavior:'smooth', block:'center'});
+      }
+    });
+  });
+
+  let seconds = 14 * 60 + 59;
+  const timer = document.getElementById('timer');
+  setInterval(() => {
+    if (seconds > 0) seconds--;
+    const m = String(Math.floor(seconds / 60)).padStart(2, '0');
+    const s = String(seconds % 60).padStart(2, '0');
+    timer.textContent = `${m}:${s}`;
+  }, 1000);
+</script>
+</body>
+</html>
